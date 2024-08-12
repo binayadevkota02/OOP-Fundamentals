@@ -1,27 +1,27 @@
 ﻿// Data types
 //Numbers: Integers and Floating points
 
-byte? age = 34;              //? datatype ko paxadi ? means datatype is nullable;
-short numberofPeopleInCompany = 23424;   //camel casing
-int areaOfCountry = 123413434;
-long distanceBetweenPlanets = 132323234252424;
+// byte? age = 34;              //? datatype ko paxadi ? means datatype is nullable;
+// short numberofPeopleInCompany = 23424;   //camel casing
+// int areaOfCountry = 123413434;
+// long distanceBetweenPlanets = 132323234252424;
 
 
-//accuracy (precision)
-float averageWeight = 65.5F;
-double averageDistance = 23234.345243456;
-decimal averageDistanceBetweenElectron = 233455.3435353535353535M;
+// //accuracy (precision)
+// float averageWeight = 65.5F;
+// double averageDistance = 23234.345243456;
+// decimal averageDistanceBetweenElectron = 233455.3435353535353535M;
 
 
-//Text
-string name = "Teksewa";
-char gender = 'M';
+// //Text
+// string name = "Teksewa";
+// char gender = 'M';
 
-//Boolean
-bool isQA = true;
+// //Boolean
+// bool isQA = true;
 
-//Dates
-DateTime dob = new(2000, 03, 06);
+// //Dates
+// DateTime dob = new(2000, 03, 06);
 
 //Console.WriteLine (averageWeight);
 //string userInput = Console.Readline();
@@ -61,7 +61,13 @@ male.PrintDetails();
 // create instance of this class and display details in console.
 
 
-page web = new page(50, 15, "First Page");
-web.printwebpage();
+//page web = new page(50, 15, "First Page");
+//web.printwebpage();
 
 
+Student bin = new ("Binaya Raj Devkota", new DateTime(2000, 3, 6), "Teksewa", "CSIT");
+var a = bin.calculateAge();
+var b = bin.getInitials();
+
+var output = Student.printDetails(initial: b, age:a);
+Console.WriteLine(output);  
