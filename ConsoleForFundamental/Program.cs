@@ -1,4 +1,5 @@
-﻿// Data types
+﻿using ABC;
+// Data types
 //Numbers: Integers and Floating points
 
 // byte? age = 34;              //? datatype ko paxadi ? means datatype is nullable;
@@ -69,5 +70,26 @@ Student bin = new ("Binaya Raj Devkota", new DateTime(2000, 3, 6), "Teksewa", "C
 var a = bin.calculateAge();
 var b = bin.getInitials();
 
-var output = Student.printDetails(initial: b, age:a);
-Console.WriteLine(output);  
+// var output = Student.printDetails(initial: b, age:a);
+// Console.WriteLine(output);  
+
+
+
+// Vehicle  vehicle= new Vehicle();
+// vehicle.VehicleNumber = "BA 66 PA 7160";
+// var x = vehicle.VehicleNumber;
+
+
+
+//Modify instantiation process
+// EV= number, range, battery capacity 
+
+//IVehicle car1 = new ElectricVehicle("BA 66 PA 7160" , 200, 45);
+ElectricVehicle car2 = new ElectricVehicle("EL 66 PA 7160" , 200, 45);
+// Engine = number, mileage, cc
+//IVehicle car2 = new EngineVehicle("BA 86 PA 1000", 5000, 5);
+ EngineVehicle car1 = new EngineVehicle("IC 62 PA 1234" , 8000, 3);
+Console.WriteLine($" for electic number {car2.VehicleNumber} rangeanxiety {car2.Range} battery capacity {car2.BatteryCapacity}");
+ 
+ Generics g = new ();
+ g.PrintDetails <string, int>("abc", 84);

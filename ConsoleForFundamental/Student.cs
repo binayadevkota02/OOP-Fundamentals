@@ -36,7 +36,7 @@ class Student(string name, DateTime dob, string college, string program)
 
 
 
-        public static string printDetails( string initial,string age, int ageDays - 0) =>
+        public static string printDetails( string initial,string age, int ageDays = 0) =>
         $"{initial} is {age} old. Indays he/she is {ageDays}.";
 
 
