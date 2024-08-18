@@ -33,7 +33,7 @@ internal class PlayingwithClollection
         {
             if (number % 3 == 0 || number % 5 == 0)
             {
-                Console.WriteLine(numbers);
+                Console.WriteLine(number);
             }
         }
 

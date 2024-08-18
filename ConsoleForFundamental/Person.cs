@@ -21,6 +21,9 @@ class Person
         Console.WriteLine ($"Name: {this.name}\nNational Identifier: {this.nid}\nDate of Birth: {this.dob}"); // \n le naya line ma liyera janxa
         
     }
+    public static string PrintDetails(Person person) =>
+        $"Name: {person.name}\nNational Identifier: {person.nid}\nDate of Birth: {person.dob}"; 
 
+    
 
 }

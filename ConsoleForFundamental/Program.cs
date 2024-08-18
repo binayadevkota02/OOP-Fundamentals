@@ -1,4 +1,7 @@
 ﻿using ABC;
+using ConsoleForFundamental;
+using ConsoleForFundamental.FileIO;
+using ConsoleForFundamental.Generics;
 // Data types
 //Numbers: Integers and Floating points
 
@@ -66,30 +69,56 @@ male.PrintDetails();
 //web.printwebpage();
 
 
-Student bin = new ("Binaya Raj Devkota", new DateTime(2000, 3, 6), "Teksewa", "CSIT");
-var a = bin.calculateAge();
-var b = bin.getInitials();
+//Student bin = new ("Binaya Raj Devkota", new DateTime(2000, 3, 6), "Teksewa", "CSIT");
+//var a = bin.calculateAge();
+//var b = bin.getInitials();
 
-// var output = Student.printDetails(initial: b, age:a);
-// Console.WriteLine(output);  
-
-
-
-// Vehicle  vehicle= new Vehicle();
-// vehicle.VehicleNumber = "BA 66 PA 7160";
-// var x = vehicle.VehicleNumber;
+//// var output = Student.printDetails(initial: b, age:a);
+//// Console.WriteLine(output);  
 
 
 
-//Modify instantiation process
-// EV= number, range, battery capacity 
+//// Vehicle  vehicle= new Vehicle();
+//// vehicle.VehicleNumber = "BA 66 PA 7160";
+//// var x = vehicle.VehicleNumber;
 
-//IVehicle car1 = new ElectricVehicle("BA 66 PA 7160" , 200, 45);
-ElectricVehicle car2 = new ElectricVehicle("EL 66 PA 7160" , 200, 45);
-// Engine = number, mileage, cc
-//IVehicle car2 = new EngineVehicle("BA 86 PA 1000", 5000, 5);
- EngineVehicle car1 = new EngineVehicle("IC 62 PA 1234" , 8000, 3);
-Console.WriteLine($" for electic number {car2.VehicleNumber} rangeanxiety {car2.Range} battery capacity {car2.BatteryCapacity}");
- 
- Generics g = new ();
- g.PrintDetails <string, int>("abc", 84);
+
+
+////Modify instantiation process
+//// EV= number, range, battery capacity 
+
+////IVehicle car1 = new ElectricVehicle("BA 66 PA 7160" , 200, 45);
+//ElectricVehicle car2 = new ElectricVehicle("EL 66 PA 7160" , 200, 45);
+//// Engine = number, mileage, cc
+////IVehicle car2 = new EngineVehicle("BA 86 PA 1000", 5000, 5);
+// EngineVehicle car1 = new EngineVehicle("IC 62 PA 1234" , 8000, 3);
+//Console.WriteLine($" for electic number {car2.VehicleNumber} rangeanxiety {car2.Range} battery capacity {car2.BatteryCapacity}");
+
+// Generics g = new ();
+// g.PrintDetails <string, int>("abc", 84);
+
+//PlayingwithClollection.learnArray();
+
+//Linq.Query();
+
+var fileHandler = new FileHandler();
+var emps = await fileHandler.ReadFileAsync();
+
+await fileHandler.WriteFileAsync();
+await fileHandler.WriteEmployeesToFileAsync(emps);
+
+
+
+FolderHandler.CreateFolder("Reports");
+FolderHandler.CreateFolder("Teksewa");
+//FolderHandler.CreateFolder("ABC",@"C:\");
+
+ParallelAndAsync parallel = new ParallelAndAsync();
+//parallel.ComputeSequential();
+//parallel.ComputeParallel();
+
+var output2 = await parallel.DoTask2();
+Console.WriteLine(output2);
+
+
+//
